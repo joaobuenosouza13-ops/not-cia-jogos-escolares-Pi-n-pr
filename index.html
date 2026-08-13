@@ -3,17 +3,268 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Jogos Escolares de Piên</title>
 
-    <link rel="stylesheet" href="style.css">
+    <style>
+
+        /* ================================
+           CONFIGURAÇÕES GERAIS
+        ================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f1f3f5;
+            color: #222;
+            line-height: 1.7;
+        }
+
+
+        /* ================================
+           CONTAINER
+        ================================= */
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+
+        /* ================================
+           CABEÇALHO
+        ================================= */
+
+        header {
+            background: linear-gradient(135deg, #075e3b, #0a7d4d);
+            color: white;
+            padding: 45px 20px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+        }
+
+        .nome-colegio {
+            font-size: 15px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 18px;
+        }
+
+        header h1 {
+            font-size: 38px;
+            line-height: 1.25;
+            margin-bottom: 18px;
+        }
+
+        .subtitulo {
+            font-size: 18px;
+            max-width: 800px;
+            margin: auto;
+            color: #e8f5ee;
+        }
+
+
+        /* ================================
+           CONTEÚDO
+        ================================= */
+
+        main {
+            background-color: white;
+            margin-top: 35px;
+            margin-bottom: 35px;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+
+        /* ================================
+           INFORMAÇÕES
+        ================================= */
+
+        .informacoes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .informacoes span {
+            background-color: #eef5f1;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .informacoes strong {
+            color: #075e3b;
+        }
+
+
+        /* ================================
+           IMAGEM
+        ================================= */
+
+        .imagem-noticia {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-height: 600px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin: 0 auto;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+        }
+
+
+        /* ================================
+           LEGENDA
+        ================================= */
+
+        .legenda {
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+            font-style: italic;
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+
+
+        /* ================================
+           TEXTO DA NOTÍCIA
+        ================================= */
+
+        article {
+            font-size: 18px;
+        }
+
+        article p {
+            margin-bottom: 22px;
+            text-align: justify;
+        }
+
+
+        /* ================================
+           BOTÃO
+        ================================= */
+
+        .area-botao {
+            text-align: center;
+            margin-top: 35px;
+            padding-top: 25px;
+            border-top: 1px solid #ddd;
+        }
+
+        button {
+            background-color: #075e3b;
+            color: white;
+            border: none;
+            padding: 14px 25px;
+            border-radius: 7px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #0a7d4d;
+            transform: scale(1.05);
+        }
+
+        #mensagem {
+            margin-top: 18px;
+            color: #075e3b;
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+
+        /* ================================
+           RODAPÉ
+        ================================= */
+
+        footer {
+            background-color: #063d28;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+            font-size: 14px;
+        }
+
+
+        /* ================================
+           CELULAR
+        ================================= */
+
+        @media (max-width: 700px) {
+
+            header {
+                padding: 35px 15px;
+            }
+
+            header h1 {
+                font-size: 27px;
+            }
+
+            .subtitulo {
+                font-size: 16px;
+            }
+
+            main {
+                width: 94%;
+                padding: 20px;
+                margin-top: 20px;
+            }
+
+            .informacoes {
+                flex-direction: column;
+            }
+
+            .informacoes span {
+                text-align: center;
+            }
+
+            article {
+                font-size: 16px;
+            }
+
+            article p {
+                text-align: left;
+            }
+
+            .imagem-noticia {
+                max-height: 450px;
+            }
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
+
+    <!-- ================================
+         CABEÇALHO
+    ================================= -->
+
     <header>
+
         <div class="container">
 
             <p class="nome-colegio">
@@ -30,88 +281,121 @@
             </p>
 
         </div>
+
     </header>
 
 
+    <!-- ================================
+         NOTÍCIA
+    ================================= -->
+
     <main class="container">
+
+
+        <!-- INFORMAÇÕES -->
 
         <section class="informacoes">
 
             <span>
-                <strong>Autor:</strong> SEU NOME
+                <strong>Autor:</strong>
+                João Pedro de Souza
             </span>
 
             <span>
-                <strong>Disciplina:</strong> SUA DISCIPLINA
+                <strong>Disciplina:</strong>
+                Ed Digital
             </span>
 
             <span>
-                <strong>Data:</strong> 12 de agosto de 2026
-            </span>
-
-            <span>
-                <strong>Entrega:</strong> 12 de agosto de 2026
+                <strong>Data:</strong>
+                12 de agosto de 2026
             </span>
 
         </section>
 
 
-        <!-- IMAGEM DA PREFEITURA DE PIÊN -->
+        <!-- ================================
+             IMAGEM DA PREFEITURA DE PIÊN
+        ================================= -->
+
         <img
-            src= "https://www.pien.pr.gov.br/storage/images/2025/06/post-1750096007.jpg"
+            src="https://www.pien.pr.gov.br/storage/images/2025/06/post-1750096007.jpg"
             alt="Equipe de futsal reunida durante competição esportiva em Piên"
             class="imagem-noticia"
         >
 
+
+        <!-- LEGENDA -->
 
         <p class="legenda">
             Equipe de futsal reunida após uma competição esportiva em Piên.
         </p>
 
 
+        <!-- ================================
+             TEXTO DA NOTÍCIA
+        ================================= -->
+
         <article>
 
             <p>
-                Os Jogos Escolares de Piên, no Paraná, movimentam a comunidade escolar
-                ao reunir estudantes em diferentes disputas esportivas. A competição
-                proporciona aos jovens a oportunidade de representar suas escolas,
-                desenvolver habilidades e vivenciar momentos de integração.
+                Os Jogos Escolares de Piên, no Paraná, movimentam a comunidade
+                escolar ao reunir estudantes em diferentes disputas esportivas.
+                A competição proporciona aos jovens a oportunidade de representar
+                suas escolas, desenvolver habilidades e vivenciar momentos de
+                integração.
             </p>
+
 
             <p>
                 Além da busca pelos melhores resultados, os jogos destacam valores
-                importantes para a formação dos estudantes, como respeito, disciplina,
-                cooperação e espírito de equipe. A participação em atividades esportivas
-                também contribui para uma rotina mais ativa e aproxima alunos de
-                diferentes escolas.
+                importantes para a formação dos estudantes, como respeito,
+                disciplina, cooperação e espírito de equipe. A participação em
+                atividades esportivas também contribui para uma rotina mais ativa
+                e aproxima alunos de diferentes escolas.
             </p>
 
+
             <p>
-                Para os participantes, cada partida representa uma oportunidade de
-                aprender com vitórias e derrotas. O evento mostra que o esporte escolar
-                vai além da competição, ajudando a fortalecer amizades e experiências
-                que podem permanecer na memória dos estudantes.
+                Para os participantes, cada partida representa uma oportunidade
+                de aprender com vitórias e derrotas. O evento mostra que o esporte
+                escolar vai além da competição, ajudando a fortalecer amizades e
+                experiências que podem permanecer na memória dos estudantes.
             </p>
+
 
             <p>
                 O esporte também proporciona momentos de união entre atletas,
                 professores, familiares e toda a comunidade escolar. Dessa forma,
                 os Jogos Escolares contribuem não apenas para a prática esportiva,
-                mas também para a construção de valores que acompanham os estudantes
-                dentro e fora da escola.
+                mas também para a construção de valores que acompanham os
+                estudantes dentro e fora da escola.
             </p>
 
         </article>
 
 
-        <button id="botao">
-            Clique para uma mensagem
-        </button>
+        <!-- ================================
+             BOTÃO
+        ================================= -->
 
-        <p id="mensagem"></p>
+        <div class="area-botao">
+
+            <button id="botao">
+                Clique para uma mensagem
+            </button>
+
+            <p id="mensagem"></p>
+
+        </div>
+
 
     </main>
 
+
+    <!-- ================================
+         RODAPÉ
+    ================================= -->
 
     <footer>
 
@@ -124,9 +408,28 @@
     </footer>
 
 
-    <script src="script.js"></script>
+    <!-- ================================
+         JAVASCRIPT
+    ================================= -->
+
+    <script>
+
+        const botao = document.getElementById("botao");
+
+        const mensagem = document.getElementById("mensagem");
+
+        botao.addEventListener("click", function () {
+
+            mensagem.textContent =
+                "O esporte une os estudantes, fortalece amizades e ensina importantes valores de respeito e trabalho em equipe! 🏆⚽";
+
+        });
+
+    </script>
+
 
 </body>
 
 </html>
 ```
+ 
